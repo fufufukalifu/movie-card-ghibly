@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ghibli Fans Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Loading Bootstrap -->
+  <link href="src/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link href="src/css/flat-ui.min.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="src/img/favicon.ico">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="row">
+
+
+      <!-- navigasi -->
+      <div class="container">
+        <div class="col-xs-12">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="#">Ghibli Movie Cards</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-left">
+                <li><a href="#fakelink">Movie List</a></li>
+                <li><a href="#fakelink">About Me</a></li>
+              </ul>
+              <form class="navbar-form navbar-right" action="#" role="search">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                    <span class="input-group-btn">
+                      <button type="submit" class="btn"><span class="fui-search"></span></button>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->
+        </div>
+      </div>
+      <!-- end navigasi -->
+
+      <!-- konten -->
+      <div class="row" id="app">
+
+        <div class="container">
+          <div class="col-xs-3" v-for="result in results">
+            <div class="tile">
+              <img src="img/icons/svg/compas.svg" alt="Compas" class="tile-image big-illustration">
+              <h3 class="tile-title">{{ result.title }}</h3>
+              <p>{{ result.id }}</p>
+              <a class="btn btn-primary btn-large btn-block" href="http://designmodo.com/flat">Get Pro</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- end konten -->
+
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="src/js/vue.js"></script>
+    <script src="src/js/apps.js"></script>
+
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src="src/js/vendor/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="src/js/vendor/video.js"></script>
+    <script src="src/js/flat-ui.min.js"></script>
+
+  </body>
+  </html>
